@@ -1,13 +1,12 @@
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles/global";
 import { darkTheme } from "./styles/theme";
-
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-    <div className="App">
-      Hello World!
-    </div>
+      <GlobalStyle />
+      <div>Hello World!</div>
     </ThemeProvider>
   );
 }
