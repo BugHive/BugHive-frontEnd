@@ -48,7 +48,7 @@ function Index() {
 
   const [search, setSearch] = useState("");
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     setSearch(event.target.value);
   }
  
