@@ -8,4 +8,12 @@ export const GlobalStyle = createGlobalStyle`
 	box-sizing: border-box;
 	font-family: 'Ruda', sans-serif;
 }
+
+body{
+	font-family: 'Ruda', sans-serif;
+}
+
+button{
+	cursor: pointer;
+}
 `;

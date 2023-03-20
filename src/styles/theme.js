@@ -1,5 +1,5 @@
-const Fonts = {
-  small : "16px",
+const fonts = {
+  small : "14px",
   large: "20px",
   xLarge: "26px"
 };
@@ -17,9 +17,10 @@ export const darkTheme = {
     lightYellow: "#FFE141",
     text: {
       main: "#F9F9F9",
+      secondary: "#A7A7A7",
     },
   },
-  Fonts,
+  fonts,
 };
 
 export const lightTheme = {
@@ -35,7 +36,8 @@ export const lightTheme = {
     lightYellow: "#FFE141",
     text: {
       main: "#000000",
+      secondary: "#A7A7A7",
     },
   },
-  Fonts,
+  fonts,
 };
