@@ -35,7 +35,11 @@ const SearchBar = styled.form`
       text-indent: 1em;
       background-color: transparent;
       border: none;
-      color: ${(props)=>props.theme.palette.secondary2};
+      color: ${(props)=>props.theme.palette.text.main};
+
+      &::placeholder{
+        color: ${(props)=>props.theme.palette.text.main};
+      }
     }
 `;
 
