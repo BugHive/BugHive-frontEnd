@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin: auto;
+    position: relative;
+    width: fit-content;
 `;
 
 export const Avatar = styled.button`
@@ -12,6 +14,7 @@ export const Avatar = styled.button`
     border: none;
     cursor: pointer;
     align-self: flex-end;
+
 
 
     #arrow{
@@ -29,8 +32,10 @@ export const Avatar = styled.button`
 
 
 export const PopupContainer = styled.div`
+    display: flex;
     position: absolute;
-    right: 50px;
+    right: 5px;
+    /* left: 0; */
     display: flex;
     align-self: center;
     align-items: center;
@@ -38,6 +43,8 @@ export const PopupContainer = styled.div`
     padding: 0;
     transition: all 1s ease-in-out; 
     border: 10px;
+    width: 200px;
+    margin: auto;
   `;
 
 export const PopupContent = styled.div`
