@@ -24,12 +24,11 @@ export const AuthWrapper = styled.div`
 	}
 
 	.welcome-text{
-		font-family: 'Ruda';
-		font-style: normal;
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 22px;
 		color: ${props=>props.theme.palette.text.main};
 		margin-bottom: 2.5rem;
+		margin-top: 2rem;
 	}
 	
 	.new-to-bug-hive{
@@ -54,15 +53,20 @@ export const AuthWrapper = styled.div`
 		bottom: 50%;
 	}
 
+	.lines{
+		margin: 0.5rem 0;
+	}
+
 `
 
 export const AuthContainer = styled.div`
-	height: 393px;
-	width: 338px;
+	height: 60%;
+	width: 25%;
 	background-color: ${props=>props.theme.palette.primary};
 	border-radius: 9px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 2rem;
 `
 
