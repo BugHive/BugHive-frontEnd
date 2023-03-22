@@ -26,7 +26,7 @@ function Index({id}) {
                 </span>
         </Avatar>
         {isOpen && (
-            <PopupContainer className='popup' style={{transition:'700ms' ,  width:'210%'}}>
+            <PopupContainer className='popup' style={{transition:'700ms'}}>
                 <PopupContent>
                     <ul>
                         <li>
