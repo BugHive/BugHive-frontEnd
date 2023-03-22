@@ -44,7 +44,7 @@ export const PopupContainer = styled.div`
     transition: all 1s ease-in-out; 
     border: 10px;
     width: 200px;
-    margin: auto;
+    /* margin: auto; */
   `;
 
 export const PopupContent = styled.div`

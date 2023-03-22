@@ -4,8 +4,8 @@ import styled from 'styled-components';
  
 
 const SearchBar = styled.form`
-    width: 35%;
-    height: 3.063rem;
+    width: 40%;
+    height: 3.5rem;
     border-radius:10px;
     display: flex;
     flex-direction: row;

@@ -4,7 +4,7 @@ export const Header = styled.header`
     display: flex;
     flex-direction: row;
     gap: 3em;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     position: fixed;
     top: 0;
@@ -13,7 +13,7 @@ export const Header = styled.header`
     background-color: ${(props)=>props.theme.palette.secondary2};
 
     img{
-        margin: 0 1em;
+        margin: 0 0em;
     }
 
 
