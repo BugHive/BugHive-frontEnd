@@ -75,7 +75,7 @@ export const AuthWrapper = styled.div`
 
 		button{
 			width: 80%;
-			height: 20%;
+			height: 15%;
 		}
 	}
 `
