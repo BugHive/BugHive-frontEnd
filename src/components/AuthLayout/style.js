@@ -28,7 +28,7 @@ export const AuthWrapper = styled.div`
 		font-size: 22px;
 		color: ${props=>props.theme.palette.text.main};
 		margin-bottom: 2.5rem;
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 	}
 	
 	.new-to-bug-hive{
@@ -57,11 +57,32 @@ export const AuthWrapper = styled.div`
 		margin: 0.5rem 0;
 	}
 
+	.login-footer{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		align-self: flex-end;
+	}
+
+	form{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		button{
+			width: 80%;
+			height: 20%;
+		}
+	}
 `
 
 export const AuthContainer = styled.div`
-	height: 60%;
-	width: 25%;
+	height: ${props=> props.customHeight? props.customHeight : '60%'};
+	width: 30%;
 	background-color: ${props=>props.theme.palette.primary};
 	border-radius: 9px;
 	display: flex;
