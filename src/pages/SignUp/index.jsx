@@ -29,7 +29,7 @@ export default function SignUp() {
   `;
 
   return (
-    <AuthLayout height={"90%"}>
+    <AuthLayout height={"85%"}>
       <Logo width={"85px"} height={"85px"} />
       <h3 className='welcome-text'>Welcome to BugHive</h3>
       <SignUpForm />

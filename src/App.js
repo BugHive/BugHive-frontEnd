@@ -1,6 +1,6 @@
 
 import { ThemeProvider } from "styled-components";
-import Start from './pages/Start'
+import SignUp from './pages/SignUp'
 import { GlobalStyle } from "./styles/global";
 import { lightTheme } from "./styles/theme";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
-      <Start/>
+      <SignUp/>
     </ThemeProvider>
   );
 }
