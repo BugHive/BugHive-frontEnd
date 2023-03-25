@@ -14,6 +14,8 @@ export const Avatar = styled.button`
     border: none;
     cursor: pointer;
     align-self: flex-end;
+    width: 60px;
+    
 
 
 
