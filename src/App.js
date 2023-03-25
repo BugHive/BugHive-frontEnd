@@ -1,14 +1,14 @@
 
 import { ThemeProvider } from "styled-components";
+import Verification from "./pages/Verification";
 import { GlobalStyle } from "./styles/global";
 import { darkTheme } from "./styles/theme";
-import Forgot from "./pages/Forgot";
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
-      <Forgot/>
+      <Verification/>
     </ThemeProvider>
   );
 }
