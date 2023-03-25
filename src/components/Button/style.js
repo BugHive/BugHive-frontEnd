@@ -9,5 +9,5 @@ border-radius: 6px;
 box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
 font-weight: 700;
 font-size: 20px;
-color: ${props=> props.switched ? "white": 'black'};
+color: ${props=> props.switched ? props.theme.palette.text.main: ""};
 `

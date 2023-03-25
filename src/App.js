@@ -1,14 +1,14 @@
 
 import { ThemeProvider } from "styled-components";
-import NewPassword from "./pages/NewPassword";
+import Start from './pages/Start'
 import { GlobalStyle } from "./styles/global";
-import { darkTheme } from "./styles/theme";
+import { lightTheme } from "./styles/theme";
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
-      <NewPassword/>
+      <Start/>
     </ThemeProvider>
   );
 }
