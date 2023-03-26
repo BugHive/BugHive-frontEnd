@@ -15,8 +15,6 @@ export const Avatar = styled.button`
     cursor: pointer;
     align-self: flex-end;
     width: 60px;
-    
-
 
 
     #arrow{
@@ -43,10 +41,8 @@ export const PopupContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 0;
-    transition: all 1s ease-in-out; 
     border: 10px;
     width: 200px;
-    /* margin: auto; */
   `;
 
 export const PopupContent = styled.div`

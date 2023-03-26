@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 export const Header = styled.header`
     gap: 3em;
-    width: 100vw;
-    position: fixed;
+    width: 100%;
+    position: sticky;
     top: 0;
     height: 20%;
-    padding:0.8em 2em;  
+    padding:0.7em 2em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    z-index: 1000;
     background-color: ${(props)=>props.theme.palette.secondary2};
-    /* position: relative; */
 
     /* @media screen and (max-width: 708px) {
     font-size: 14px;
@@ -46,19 +50,3 @@ export const Header = styled.header`
         margin-right: 3em;
     }
 `;
-
-export const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 3em;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    margin: auto;
-
-
-    /* @media screen and (max-width: 308px) {
-    height: 50%;
-    font-size: 14px;
-  } */
-`
