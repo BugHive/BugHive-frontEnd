@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
 	font-family: 'Ruda', sans-serif;
+    background-color: ${(props)=>props.theme.palette.primary};
 }
 
 button{

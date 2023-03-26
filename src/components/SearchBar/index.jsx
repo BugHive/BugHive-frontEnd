@@ -14,6 +14,7 @@ const SearchBar = styled.form`
     align-items: center;
     padding: 0 0.979rem;
     position: relative;
+    margin-left: 0.5em;
     background-color: ${(props)=>props.theme.palette.secondary};
 
     #arrow{

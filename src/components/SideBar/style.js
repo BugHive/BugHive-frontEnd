@@ -4,19 +4,17 @@ import { NavLink } from "react-router-dom";
 
 export const SideBar = styled.div`
     position: fixed;
-    width: 13.5%;
+    width: 14%;
     left: 0;
-    top: 20%;
-    height: 80%;
+    top:5%;
+    height: 95vh;
     display: flex;
+    align-items: flex-start;
     background-color: ${(props)=>props.theme.palette.secondary};
 
 
     .active{
         background-color: ${(props)=>props.theme.palette.secondary2};
-    }
-    #unsaved{
-        /* margin-left: 0.88em; */
     }
 
     button{
@@ -38,6 +36,7 @@ export const SideBar = styled.div`
         padding-left: 1em;
         font-size: ${(props)=>props.theme.fonts.large};
         color:${(props)=>props.theme.palette.text.main};
+        margin-bottom: -88px;
 
         &:hover{
             background-color:${(props)=>props.theme.palette.secondary2} ;
@@ -68,8 +67,11 @@ export const SideLink = styled(NavLink)`
 
 export const Box = styled.div`
     width: 100%;
-    margin-top: 3em;
-    height: 92%;
+    align-self: flex-start;
+    margin-top: 120px;
+    height: 85.5%;
+    margin-top: 1px;
+    padding-top: 9em;
     display: flex;
     flex-direction: column;
     gap: 0.2em;
