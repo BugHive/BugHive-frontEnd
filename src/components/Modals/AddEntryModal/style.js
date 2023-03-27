@@ -7,9 +7,11 @@ export const Container = styled.div`
     right: 0;
     width: 100%; 
     height: 100%;
-    background: linear-gradient(270deg, #545454 1.33%, rgba(84, 84, 84, 0.614583) 19.02%, rgba(84, 84, 84, 0.614583) 42.82%, rgba(84, 84, 84, 0.413567) 59.57%, rgba(84, 84, 84, 0) 100%);    display: flex;
+    display: flex;
+    background: rgba(113, 113, 113, 0.3);
     align-items: center;
     justify-content: center;
+    z-index: 5555555;
 
 
     .gold1{
