@@ -6,8 +6,8 @@ export const SideBar = styled.div`
     position: fixed;
     width: 14%;
     left: 0;
-    top:5%;
-    height: 95vh;
+    top:9%;
+    height: 92vh;
     display: flex;
     align-items: flex-start;
     background-color: ${(props)=>props.theme.palette.secondary};
@@ -69,8 +69,8 @@ export const Box = styled.div`
     width: 100%;
     align-self: flex-start;
     margin-top: 120px;
-    height: 85.5%;
-    margin-top: 1px;
+    height: 87.5%;
+    margin-top: -25px;
     padding-top: 9em;
     display: flex;
     flex-direction: column;

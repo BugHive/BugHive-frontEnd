@@ -7,7 +7,8 @@ const fonts = {
 export const darkTheme = {
   theme: "dark",
   palette: {
-    primary: " #33332D",
+    primary: "#33332D",
+    nonPrimary:"#FAFAFA",
     secondary: "#545454",
     secondary2: "#707070",
     lightError: "#FFEBE8",
@@ -27,6 +28,7 @@ export const lightTheme = {
   theme: "light",
   palette: {
     primary: "#FAFAFA",
+    nonPrimary:"#33332D",
     secondary: "#F3F3F3",
     secondary2: "#DCDCDC",
     lightError: "#FFEBE8",
