@@ -12,6 +12,7 @@ const Main = styled.main`
     margin-left: 13%;
     max-height:80%;
     padding-bottom: 1em;
+    padding-left: 1em;
 `;
 
 function index({children}) {

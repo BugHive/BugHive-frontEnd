@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Saved = styled.div`
     display: flex;
     flex-direction: column;
-    padding-left:1em;
+    padding-left:0.2em;
     align-items: flex-start;
     align-self: center;
     margin-top: 1%;
