@@ -12,6 +12,26 @@ export const GlobalStyle = createGlobalStyle`
 body{
 	font-family: 'Ruda', sans-serif;
     background-color: ${(props)=>props.theme.palette.primary};
+
+	scroll-behavior: smooth;
+
+	::-webkit-scrollbar {
+     width: 15px;
+     height: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: #888; 
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    }
+
 }
 
 button{

@@ -285,7 +285,7 @@ export const Input = styled.div`
     border-bottom: 1px solid ${(props)=>props.theme.palette.lightYellow};
     color: ${(props)=>props.theme.palette.text.main};
     background-color: ${(props)=>props.theme.palette.main};
-
+    scroll-behavior: smooth;
     ::-webkit-scrollbar {
      width: 10px;
      height: 7px;
