@@ -28,7 +28,7 @@ export const lightTheme = {
   palette: {
     primary: "#FAFAFA",
     secondary: "#F3F3F3",
-    secondary2: "#F6F6F6",
+    secondary2: "#DCDCDC",
     lightError: "#FFEBE8",
     darkYellow: "#F5C500",
     darkYellow2: "#FDD017",
