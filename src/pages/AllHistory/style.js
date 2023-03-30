@@ -6,9 +6,9 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 1%;
-    width: 88vw;
+    width: 87vw;
     margin-bottom: 2em;
-    margin-left: -1em;
+    margin-left: -1.5em;
     gap: 1em;
 `;
 
@@ -63,7 +63,7 @@ export const Box = styled.div`
     align-items: center;
     justify-content: center;
     width: 74px;
-    padding: 0px 2em;
+    padding: 4px 2.3em;
     height: 42px;
     border-radius: 5px;
     cursor: pointer;
