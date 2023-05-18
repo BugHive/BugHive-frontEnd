@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AuthLayout from "../../components/AuthLayout";
 import Logo from "../../components/Logo";
 import VerificationForm from "../../components/VarificationForm";
+import { Link } from "react-router-dom";
 
 export default function Verification() {
   const StyledSpan = styled.span`
@@ -28,7 +29,10 @@ export default function Verification() {
         <StyledSpan>Resend Code</StyledSpan>
         <Line />
         <StyledMsg>
-          Return to <StyledSpan>Login</StyledSpan>
+          Return to{" "}
+          <Link to={"/login"}>
+            <StyledSpan>Login</StyledSpan>
+          </Link>
         </StyledMsg>
       </div>
     </AuthLayout>

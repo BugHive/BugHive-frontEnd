@@ -5,6 +5,7 @@ import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function VerificationForm() {
   const validationSchema = Yup.object({
@@ -52,7 +53,11 @@ export default function VerificationForm() {
       {formik.touched.securityCode && formik.errors.securityCode && (
         <Error msg={formik.errors.securityCode} />
       )}
-      <Button title={"Continue"} />
+      <Link to={"/new-password"}>
+        <div style={{ width: "25rem", marginLeft: "5.5rem", padding: "1rem" }}>
+          <Button title={"Continue"} />
+        </div>
+      </Link>
     </form>
   );
 }

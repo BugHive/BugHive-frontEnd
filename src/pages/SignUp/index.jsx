@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AuthLayout from "../../components/AuthLayout";
 import Logo from "../../components/Logo";
 import SignUpForm from "../../components/SignUpForm";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const StyledText = styled.div`
@@ -38,7 +39,10 @@ export default function SignUp() {
       </StyledText>
       <Line />
       <StyledMsg>
-        Already have an account? <StyledSpan>Login</StyledSpan>
+        Already have an account?{" "}
+        <Link to={"/login"}>
+          <StyledSpan>Login</StyledSpan>
+        </Link>
       </StyledMsg>
     </AuthLayout>
   );

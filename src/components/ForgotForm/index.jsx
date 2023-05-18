@@ -5,6 +5,7 @@ import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function ForgotForm() {
   const validationSchema = Yup.object({
@@ -50,7 +51,11 @@ export default function ForgotForm() {
       {formik.touched.email && formik.errors.email && (
         <Error msg={formik.errors.email} />
       )}
-      <Button title={"Reset Password"} />
+      <Link to={"/verification"}>
+        <div style={{ width: "25rem", marginLeft: "5.5rem", padding: "1rem" }}>
+          <Button title={"Reset Password"} />
+        </div>
+      </Link>
     </form>
   );
 }
