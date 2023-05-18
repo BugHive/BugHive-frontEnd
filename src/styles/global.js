@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
 	font-family: 'Ruda', sans-serif;
-    background-color: ${(props)=>props.theme.palette.primary};
+    background-color: ${(props) => props.theme.palette.primary};
 
 	scroll-behavior: smooth;
 
@@ -36,5 +36,9 @@ body{
 
 button{
 	cursor: pointer;
+}
+
+a{
+    text-decoration:  none;
 }
 `;

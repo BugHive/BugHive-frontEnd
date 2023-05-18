@@ -4,6 +4,7 @@ import Button from "../Button";
 import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   const validationSchema = Yup.object({
@@ -52,7 +53,16 @@ export default function LoginForm() {
       {formik.touched.password && formik.errors.password && (
         <Error msg={formik.errors.password} />
       )}
-      <Button title={"Log In"} />
+      <Link to={"/"}>
+        <div
+          style={{
+            width: "25rem",
+            marginLeft: "5.5rem",
+            padding: "1rem",
+          }}>
+          <Button title={"Log In"} />
+        </div>
+      </Link>
     </form>
   );
 }

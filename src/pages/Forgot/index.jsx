@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AuthLayout from "../../components/AuthLayout";
 import ForgotForm from "../../components/ForgotForm";
 import Logo from "../../components/Logo";
+import { Link } from "react-router-dom";
 
 export default function Forgot() {
   const StyledSpan = styled.span`
@@ -29,11 +30,17 @@ export default function Forgot() {
       <ForgotForm />
       <div className='login-footer'>
         <StyledP>
-          Return to <StyledSpan>Login</StyledSpan>
+          Return to{" "}
+          <Link to={"/login"}>
+            <StyledSpan>Login</StyledSpan>
+          </Link>
         </StyledP>
         <Line />
         <StyledMsg>
-          New to BugHive? <StyledSpan>SignUp</StyledSpan>
+          New to BugHive?{" "}
+          <Link to={"/signup"}>
+            <StyledSpan>SignUp</StyledSpan>
+          </Link>
         </StyledMsg>
       </div>
     </AuthLayout>

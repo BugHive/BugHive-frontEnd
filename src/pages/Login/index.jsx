@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AuthLayout from "../../components/AuthLayout";
 import LoginForm from "../../components/LoginForm";
 import Logo from "../../components/Logo";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const StyledSpan = styled.span`
@@ -25,10 +26,15 @@ export default function Login() {
       <h3 className='welcome-text'>Welcome to BugHive</h3>
       <LoginForm />
       <div className='login-footer'>
-        <StyledSpan>Forgot password?</StyledSpan>
+        <Link to={"/forgot"}>
+          <StyledSpan>Forgot password?</StyledSpan>
+        </Link>
         <Line />
         <StyledMsg>
-          New to BugHive? <StyledSpan>SignUp</StyledSpan>
+          New to BugHive?{" "}
+          <Link to={"/signup"}>
+            <StyledSpan>SignUp</StyledSpan>
+          </Link>
         </StyledMsg>
       </div>
     </AuthLayout>
