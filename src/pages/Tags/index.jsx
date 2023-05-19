@@ -5,6 +5,7 @@ import BugEntry from "../../components/BugEntry";
 
 export default function Tags() {
   const Container = styled.div`
+    color: ${(props) => props.theme.palette.text.main};
     padding: 2rem;
     .tags {
       display: flex;
