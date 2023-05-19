@@ -69,7 +69,7 @@ export default function NewPasswordForm() {
       {formik.touched.confirmPassword && formik.errors.confirmPassword && (
         <Error msg={formik.errors.confirmPassword} />
       )}
-      <Link to={"/login"}>
+      <Link to={"/"}>
         <div style={{ width: "25rem", marginLeft: "5.5rem", padding: "1rem" }}>
           <Button title={"Log In"} />
         </div>
