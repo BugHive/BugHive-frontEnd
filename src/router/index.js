@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
+//pages
 import Layout from "../components/Layout";
 import SavedBugs from "../pages/SavedBugs/index";
 import AllHistory from "../pages/AllHistory";
@@ -14,6 +16,8 @@ import Forgot from "../pages/Forgot";
 import Start from "../pages/Start";
 import NewPassword from "../pages/NewPassword";
 import Verification from "../pages/Verification";
+import AllEntries from '../pages/AllEntries';
+
 
 export default function Router() {
   return (
@@ -26,6 +30,7 @@ export default function Router() {
       <Route path='verification' element={<Verification />} />
       <Route element={<Layout />}>
         <Route path='/' element={<SavedBugs />}>
+          <Route index  element={<AllEntries/>}/>
           <Route path='popular' element={<Popular />} />
           <Route path='recently' element={<Recently />} />
         </Route>
