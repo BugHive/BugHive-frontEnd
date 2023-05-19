@@ -16,8 +16,8 @@ import Forgot from "../pages/Forgot";
 import Start from "../pages/Start";
 import NewPassword from "../pages/NewPassword";
 import Verification from "../pages/Verification";
-import AllEntries from '../pages/AllEntries';
-
+import AllEntries from "../pages/AllEntries";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 export default function Router() {
   return (
@@ -28,16 +28,18 @@ export default function Router() {
       <Route path='Start' element={<Start />} />
       <Route path='new-password' element={<NewPassword />} />
       <Route path='verification' element={<Verification />} />
-      <Route element={<Layout />}>
-        <Route path='/' element={<SavedBugs />}>
-          <Route index  element={<AllEntries/>}/>
-          <Route path='popular' element={<Popular />} />
-          <Route path='recently' element={<Recently />} />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<Layout />}>
+          <Route path='/' element={<SavedBugs />}>
+            <Route index element={<AllEntries />} />
+            <Route path='popular' element={<Popular />} />
+            <Route path='recently' element={<Recently />} />
+          </Route>
+          <Route path='unsaved-bugs' element={<UnsavedEntry />} />
+          <Route path='all-history' element={<AllHistory />} />
+          <Route path='tags' element={<Tags />} />
+          <Route path='settings' element={<Settings />} />
         </Route>
-        <Route path='unsaved-bugs' element={<UnsavedEntry />} />
-        <Route path='all-history' element={<AllHistory />} />
-        <Route path='tags' element={<Tags />} />
-        <Route path='settings' element={<Settings />} />
       </Route>
     </Routes>
   );

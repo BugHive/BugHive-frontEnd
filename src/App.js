@@ -3,14 +3,17 @@ import { GlobalStyle } from "./styles/global";
 import { darkTheme } from "./styles/theme";
 import ViewProvider from "./context/ViewContext";
 import Router from "./router";
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <GlobalStyle />
-      <ViewProvider>
-        <Router />
-      </ViewProvider>
+      <AuthContextProvider>
+        <GlobalStyle />
+        <ViewProvider>
+          <Router />
+        </ViewProvider>
+      </AuthContextProvider>
     </ThemeProvider>
   );
 }
