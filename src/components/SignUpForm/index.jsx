@@ -1,12 +1,11 @@
 import { useFormik } from "formik";
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from "../../context/AuthContext";
 
 export default function SignUpForm() {
   const validationSchema = Yup.object({
@@ -24,7 +23,7 @@ export default function SignUpForm() {
     confirmPassword: "",
   };
 
-  const { isLoggedIn, login } = useContext(AuthContext);
+  const [valid, setValid] = useState(false);
 
   const onSubmit = async ({ username, email, password }) => {
     const res = await axios
@@ -38,7 +37,7 @@ export default function SignUpForm() {
       });
 
     if (res.status === 201) {
-      login();
+      setValid(true);
     }
   };
 
@@ -48,9 +47,10 @@ export default function SignUpForm() {
     validationSchema,
   });
 
-  if (isLoggedIn) {
-    return <Navigate to={"/"} />;
+  if (valid) {
+    return <Navigate to={"/login"} />;
   }
+
   return (
     <form onSubmit={formik.handleSubmit}>
       <FormItem
