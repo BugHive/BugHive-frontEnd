@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Button from "../Button";
 import FormItem from "../FormItem";
 import Error from "../Error";
@@ -31,6 +31,7 @@ export default function LoginForm() {
       });
 
     if (res.status === 200) {
+      localStorage.setItem("token", JSON.stringify(res.data.token));
       login();
     }
   };
@@ -41,9 +42,18 @@ export default function LoginForm() {
     validationSchema,
   });
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      login();
+    }
+  }, [isLoggedIn, login]);
+
   if (isLoggedIn) {
     return <Navigate to={"/"} />;
   }
+
   return (
     <form onSubmit={formik.handleSubmit}>
       <FormItem
