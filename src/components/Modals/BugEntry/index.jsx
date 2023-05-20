@@ -11,7 +11,7 @@ import { useViewContext } from '../../../context/ViewContext';
 
 const Index = () => {
     
-   const {closeModal} = useViewContext();
+   const {closeModal} = useViewContext(); 
 
 
     const [formData, setFormData] = useState({

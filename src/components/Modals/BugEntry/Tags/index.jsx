@@ -106,7 +106,7 @@ function Index() {
 
 export default Index;
 
-
+ 
 //helper component
 const DropdownItem = ({ item, onSelect, isSelected }) => (
     <ItemWrapper onClick={() => onSelect(item)}>

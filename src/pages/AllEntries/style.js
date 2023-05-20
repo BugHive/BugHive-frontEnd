@@ -8,7 +8,7 @@ export const FlexRow = styled.div`
     margin-top: 1em;
     margin-left: 1.5em;
 `;
-
+ 
 export const FlexCol = styled.div`
     display: flex;
     flex-direction: column;

@@ -11,7 +11,7 @@ export const Container = styled.div`
     background: rgba(113, 113, 113, 0.3);
     align-items: center;
     justify-content: center;
-    z-index: 5555555;
+    z-index: 5555555; 
 
     #title{
         background-color: transparent;

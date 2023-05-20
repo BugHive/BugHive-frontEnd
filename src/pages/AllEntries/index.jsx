@@ -11,7 +11,7 @@ import axios from 'axios';
 function Index() {
 
 
-    const [bugs, setBugs] = useState([]);
+    const [bugs, setBugs] = useState([]); 
 
     const token = localStorage.getItem("token");
 

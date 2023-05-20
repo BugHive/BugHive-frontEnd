@@ -15,4 +15,4 @@ function index({value ,  onChange , name}) {
   )
 }
 
-export default index
+export default index 
