@@ -3,16 +3,16 @@ import { Box, Button, Checkbox, DivFill, DropdownWrapper, Input, InputPlaceHolde
 
 function Index() {
     const [isOpen, setIsOpen] = useState(false);
-    const [selevtedEntries, setselevtedEntries] = useState([]);
+    const [selectedEntries, setselectedEntries] = useState([]);
     const [newTagName, setNewTagName] = useState('');
-    const [tags, setTags] = useState(['Tag 1', 'Tag 2', 'Tag 3']);
+    const [tags, setTags] = useState(['JS', 'Async', 'Java']);
     const [isAddTagVisible, setIsAddTagVisible] = useState(false);
   
     const handleTagClick = item => {
-      setselevtedEntries(prevselevtedEntries =>
-        prevselevtedEntries.includes(item)
-          ? prevselevtedEntries.filter(selectedItem => selectedItem !== item)
-          : [...prevselevtedEntries, item]
+      setselectedEntries(prevselectedEntries =>
+        prevselectedEntries.includes(item)
+          ? prevselectedEntries.filter(selectedItem => selectedItem !== item)
+          : [...prevselectedEntries, item]
       );
     };
   
@@ -29,7 +29,7 @@ function Index() {
         isAddTagVisible && setIsAddTagVisible(false);
     }
 
-    const hasselevtedEntries = selevtedEntries.length > 0;
+    const hasselectedEntries = selectedEntries.length > 0;
   return (
     <Box>
         <Span>
@@ -39,12 +39,12 @@ function Index() {
         <InputWrapper>
             <Input
                 type="text"
-                value={selevtedEntries.join(' , ').split( )}
+                value={selectedEntries.join(' , ').split( )}
                 onClick={handleOpen}
                 readOnly
-                className={hasselevtedEntries ? 'has-selected-items' : ''}
+                className={hasselectedEntries ? 'has-selected-items' : ''}
             >
-                {selevtedEntries.length === 0  
+                {selectedEntries.length === 0  
                 ? 
                 <InputPlaceHolder>
                     <p>Pick or create a Tag</p>
@@ -59,7 +59,7 @@ function Index() {
                 : 
                 <DivFill style={{display:'flex' , flexDirection:'row' , width:'100%' 
                 , alignItems:'center' , justifyContent:'space-between'}}>
-                    {selevtedEntries.join(' , ').split( )}
+                    {selectedEntries.join(' , ').split( )}
                     <span>
                         {isOpen ? 
                             <svg stroke="currentColor" fill="gray" stroke-width="0" viewBox="0 0 24 24" height="2.5em" width="1.9em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8l6 6H6z"></path></g></svg>  
@@ -76,7 +76,7 @@ function Index() {
                             key={item}
                             item={item}
                             onSelect={handleTagClick}
-                            isSelected={selevtedEntries.includes(item)}
+                            isSelected={selectedEntries.includes(item)}
                         />
                     ))}
                 {isAddTagVisible ? (

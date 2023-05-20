@@ -12,6 +12,18 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 5555555;
+
+    #title{
+        background-color: transparent;
+        offset: none;
+        border: none;
+        font-size: 25px;
+        color:${(props)=>props.theme.palette.text.main};
+
+        ::placeholder{
+            color:${(props)=>props.theme.palette.text.secondary};
+        }
+    }
 `;
 
 export const BugEntryModal = styled.div`
