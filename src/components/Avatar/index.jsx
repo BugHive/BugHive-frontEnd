@@ -127,6 +127,9 @@ function Index({ id }) {
 
               <Link to={"/login"}>
                 <ListItem
+                  onClick={() => {
+                    localStorage.clear();
+                  }}
                   svg={
                     <svg
                       stroke={stroke}

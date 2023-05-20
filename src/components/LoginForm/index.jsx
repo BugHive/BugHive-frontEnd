@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Button from "../Button";
 import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import axios from "axios";
 
 export default function LoginForm() {
   const validationSchema = Yup.object({
@@ -16,9 +18,22 @@ export default function LoginForm() {
     password: "",
   };
 
+  const { isLoggedIn, login } = useContext(AuthContext);
+
   const onSubmit = async ({ email, password }) => {
-    console.log(email);
-    console.log(password);
+    const res = await axios
+      .post(`https://bughive-rest-api.onrender.com/api/login`, {
+        email,
+        password,
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+
+    if (res.status === 200) {
+      localStorage.setItem("token", JSON.stringify(res.data.token));
+      login();
+    }
   };
 
   const formik = useFormik({
@@ -26,6 +41,18 @@ export default function LoginForm() {
     onSubmit,
     validationSchema,
   });
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      login();
+    }
+  }, [isLoggedIn, login]);
+
+  if (isLoggedIn) {
+    return <Navigate to={"/"} />;
+  }
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -53,16 +80,7 @@ export default function LoginForm() {
       {formik.touched.password && formik.errors.password && (
         <Error msg={formik.errors.password} />
       )}
-      <Link to={"/"}>
-        <div
-          style={{
-            width: "25rem",
-            marginLeft: "5.5rem",
-            padding: "1rem",
-          }}>
-          <Button title={"Log In"} />
-        </div>
-      </Link>
+      <Button title={"Log In"} />
     </form>
   );
 }

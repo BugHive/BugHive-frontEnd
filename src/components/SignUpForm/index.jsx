@@ -1,10 +1,11 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import FormItem from "../FormItem";
 import Error from "../Error";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import axios from "axios";
 
 export default function SignUpForm() {
   const validationSchema = Yup.object({
@@ -22,10 +23,22 @@ export default function SignUpForm() {
     confirmPassword: "",
   };
 
+  const [valid, setValid] = useState(false);
+
   const onSubmit = async ({ username, email, password }) => {
-    console.log(username);
-    console.log(email);
-    console.log(password);
+    const res = await axios
+      .post(`https://bughive-rest-api.onrender.com/api/users`, {
+        username,
+        email,
+        password,
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+
+    if (res.status === 201) {
+      setValid(true);
+    }
   };
 
   const formik = useFormik({
@@ -33,6 +46,10 @@ export default function SignUpForm() {
     onSubmit,
     validationSchema,
   });
+
+  if (valid) {
+    return <Navigate to={"/login"} />;
+  }
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -84,11 +101,7 @@ export default function SignUpForm() {
       {formik.touched.confirmPassword && formik.errors.confirmPassword && (
         <Error msg={formik.errors.confirmPassword} />
       )}
-      <Link to={"/"}>
-        <div style={{ width: "25rem", marginLeft: "5.5rem", padding: "1rem" }}>
-          <Button title={"Sign Up"} />
-        </div>
-      </Link>
+      <Button title={"Sign Up"} />
     </form>
   );
 }
