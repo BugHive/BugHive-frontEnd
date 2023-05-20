@@ -101,11 +101,6 @@ export default function SignUpForm() {
       {formik.touched.confirmPassword && formik.errors.confirmPassword && (
         <Error msg={formik.errors.confirmPassword} />
       )}
-      {/* <Link to={"/"}>
-        <div style={{ width: "25rem", marginLeft: "5.5rem", padding: "1rem" }}>
-          <Button title={"Sign Up"} />
-        </div>
-      </Link> */}
       <Button title={"Sign Up"} />
     </form>
   );
