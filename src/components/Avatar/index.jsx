@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useTheme from "../../hooks/useTheme";
 
 //style
 import { Container, Avatar, PopupContainer, PopupContent } from "./style";
@@ -9,6 +10,8 @@ function Index({ id }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const stroke = "white";
+
+  const { toggleTheme } = useTheme();
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -78,7 +81,7 @@ function Index({ id }) {
                 </svg>
                 <p>Dark Mode</p>
                 <label className='switch'>
-                  <input type='checkbox' />
+                  <input type='checkbox' onClick={toggleTheme} />
                   <span className='slider round'></span>
                 </label>
               </li>
