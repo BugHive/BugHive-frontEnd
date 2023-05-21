@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "/api/tags";
+const baseUrl = "https://bughive-rest-api.onrender.com/api/tags";
 let token = null;
 
 const setToken = (newToken) => {
