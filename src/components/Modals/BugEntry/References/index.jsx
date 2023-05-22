@@ -26,7 +26,7 @@ function Index({sendRef}) {
 
   useEffect(()=>{
     sendRef(references);
-  },[references])
+  },[references , sendRef])
 
   return (
     <Box>

@@ -14,7 +14,7 @@ function Index({sendDesc, name}) {
 
   useEffect(()=>{
     sendDesc(desc);
-  },[desc])
+  },[desc , sendDesc])
 
   return (
     <Box>
