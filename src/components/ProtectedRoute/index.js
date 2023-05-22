@@ -18,9 +18,9 @@ export default function ProtectedRoute() {
   if (isLoggedIn) {
     return (
       <div>
-      <Suspense fallback={<Spinner/>}>
-          <Outlet />
-      </Suspense>
+        <Suspense fallback={<Spinner/>}>
+            <Outlet />
+        </Suspense>
       </div>
     );
   }
