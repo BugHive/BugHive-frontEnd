@@ -35,9 +35,10 @@ export const ColBox = styled.div`
 `;
 
 
+
 export const ColEntry = styled.div`
     width: 100%;
-    height: 1.2em;
+    height: 1.7em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,4 +87,5 @@ export const Entry = styled.div`
     cursor: pointer;
     color:${(props)=>props.theme.palette.text.secondary};
     background-color: ${(props)=>props.theme.palette.secondary2};
+    margin-right: 0.5em;
 `;
