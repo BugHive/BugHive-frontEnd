@@ -1,7 +1,6 @@
-import React, { Suspense, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import Spinner from '../../components/Spinner';
 export default function ProtectedRoute() {
   const { isLoggedIn, login, logout } = useContext(AuthContext);
 
@@ -16,13 +15,7 @@ export default function ProtectedRoute() {
   }, [isLoggedIn, login, logout]);
 
   if (isLoggedIn) {
-    return (
-      <div>
-        <Suspense fallback={<Spinner/>}>
-            <Outlet />
-        </Suspense>
-      </div>
-    );
+    return <Outlet />;
   }
   return <Navigate to={"/login"} />;
 }
