@@ -36,17 +36,6 @@ const Index = () => {
     }));
   };
 
-  // const saveData = () => {
-  //   const newData = { ...formData };
-  //   setDataList((prevDataList) => [...prevDataList, newData]);
-  //   setFormData({
-  //     title: "",
-  //     description: "",
-  //     tags: "",
-  //     references: "",
-  //   });
-  // };
-
   return (
     <Container>
       <BugEntryModal>

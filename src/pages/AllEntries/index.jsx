@@ -15,13 +15,6 @@ import axios from "axios";
 
 function Index() {
   const [bugs, setBugs] = useState([]);
-
-  //   delete the if statement when you want to use bugs!!!!
-  if (bugs) {
-    console.log(".");
-  }
-  //   delete the if statement when you want to use bugs!!!!
-
   const token = localStorage.getItem("token");
 
   useEffect(() => {
