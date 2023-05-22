@@ -1,0 +1,1 @@
+export const API_URL = "https://bughive-rest-api.onrender.com/api";
