@@ -41,7 +41,8 @@ const Index = () => {
               title: title,
               description: description,
               references: refs,
-              tags: selectedTags,
+              // tags: selectedTgas,
+              tags:[]
             }, {
               headers: {
                 Authorization: `Bearer ${token}`,

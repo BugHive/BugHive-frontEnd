@@ -24,7 +24,7 @@ function Index({sendSelectedTagsToParent}) {
 
     useEffect(()=>{
         sendSelectedTagsToParent(selectedEntries);
-    },[selectedEntries])
+    },[selectedEntries , sendSelectedTagsToParent]) 
   
     const handleNewTagClick = () => {
       if (newTagName.trim()) {
