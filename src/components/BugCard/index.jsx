@@ -73,8 +73,8 @@ function Index({bug}) {
                   },
                 });
                  if(response){
-                   console.log(response.data);
                    setDeleted(true);
+                   setIsOpen(false)
                  } 
               } catch (err) {
                 console.error(err);
